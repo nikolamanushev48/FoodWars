@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="food">Храна</string>
+    <string name="app_name">Войни с храна</string>
+    <string name="start_logo">Start Logo</string>
+    <string name="card_image">Card Image</string>
+    <string name="left">Наляво</string>
+    <string name="right">Надясно</string>
+    <string name="gross">Гадно</string>
+    <string name="pleskavica">Плескавица</string>
+    <string name="baklava">Баклава</string>
+    <string name="goulash">Гулаш</string>
+    <string name="gyros">Гирос</string>
+    <string name="porcului">Порцулуи</string>
+    <string name="sarma">Сърми</string>
+    <string name="ferges">Фергес</string>
+    <string name="shopska_salad">Шопска Салата</string>
+    <string name="food_shared_preferences_file_key">sharedFood</string>
+    <string name="users_shared_preferences_file_key">users</string>
+    <string name="create_account">Създай акаунт</string>
+    <string name="first_name">Собствено име</string>
+    <string name="last_name">Фамилно име</string>
+    <string name="email">Имейл</string>
+    <string name="man">Мъж</string>
+    <string name="woman">Жена</string>
+    <string name="other">Друг</string>
+    <string name="interests">Интереси</string>
+    <string name="bulgarian">Български</string>
+    <string name="register">Регистрация</string>
+    <string name="share">Сподели</string>
+    <string name="mainscreen">Главен Екран</string>
+    <string name="profile">Профил</string>
+    <string name="profile_picture">Профилна снимка</string>
+    <string name="full_name">Пълно име</string>
+    <string name="gender">Пол</string>
+    <string name="confirmation">Потвърждение</string>
+    <string name="word_is">е</string>
+    <string name="greek">Грък</string>
+    <string name="serbian">Сърбин</string>
+    <string name="albanian">Албанец</string>
+    <string name="romanian">Румънец</string>
+    <string name="turkish">Турчин</string>
+    <string name="required_field">Полето е задължително!</string>
+    <string name="invalid_email">Невалиден имейл!</string>
+    <string name="predefined_message">
+        %1$s %2$s харесва %3$s което е част от %4$d храни!
+    </string>
+    <string name="share_via">Сподели чрез</string>
+    <string name="already_inserted_data">Данните са вече вмъкнати!</string>
+    <string name="back_to_the_app">Назад към приложението</string>
+
+    <string name="question_who">Кой </string>
+    <string name="question_is">е\n </string>
+    <string name="question_hungry">Гладен </string>
+    <string name="question_question_mark">"?"</string>
+
+    <string name="salty">Солено</string>
+    <string name="hot">Горещо</string>
+    <string name="cold">Студено</string>
+    <string name="spicy">Люто</string>
+    <string name="dry">Сухо</string>
+    <string name="wet">Влажно</string>
+    <string name="baked">Изпечено</string>
+    <string name="fried">Изпържено</string>
+    <string name="sweet">Сладко</string>
+    <string name="high_in_nutrition">Хранително</string>
+    <string name="bitter">Горчиво</string>
+    <string name="tough">Жилаво</string>
+    <string name="traditional">Традиоционно</string>
+    <string name="regional">Регионално</string>
+    <string name="dessert">Десерт</string>
+    <string name="main_dish">Основно ястие</string>
+    <string name="starter">Предястие</string>
+    <string name="high_in_protein">Високо на протеини</string>
+    <string name="high_in_carbs">Високо на въглехидрати</string>
+    <string name="nobody_but_chickens">Няма нищо нередно тук!</string>
+    <string name="description_text">Задайте местоположението си, така че да виждате нови храни около вас!</string>
+    <string name="change">Промени</string>
+    <string name="change_location">Промени локация</string>
+
+    <string name="motivation_text_lets">Let\'s</string>
+    <string name="motivation_text_go">GO</string>
+    <string name="motivation_text_mark">!</string>
+    <string name="negative_button_alert">Назад</string>
+    <string name="sad_face">Тъжно Лице</string>
+    <string name="permission_permanently_denied">Постоянно отказано местоположение!</string>
+    <string name="settings">Настройки</string>
+    <string name="get_location_success_text">Местоположението е променено успешно! %d нови храни около вас!</string>
+    <string name="done">Готово</string>
+    <string name="alert_message">Необходимо е разрешение за местоположение, за да проследите местоположението си текущото местоположение!</string>
+    <string name="positive_button_alert">Добре</string>
+    <string name="perm_denied_location">Постоянно отказано местоположение!</string>
+    <string name="example_charactristic">example</string>
+    <string name="user_address">\"User address: \"</string>
+
+    <string name="absolutely_terrible">Абсолютно Ужасно</string>
+    <string name="terrible">Ужасно</string>
+    <string name="very_bad">Много Лошо</string>
+    <string name="bad">Лошо</string>
+    <string name="normal">Норамално</string>
+    <string name="tasty">Вкусно</string>
+    <string name="good">Добро</string>
+    <string name="very_good">Много Добро</string>
+    <string name="delicious">Възхитително</string>
+    <string name="absolutely_delicious">Абсолютно Възхитително</string>
+
+    <string name="name">Име</string>
+    <string name="type">Тип</string>
+    <string name="basic_information">Основна Информация</string>
+    <string name="range">Обхват</string>
+    <string name="current_location">Текуща Локация</string>
+    <string name="rating_text">Рейтинг на храната: %d</string>
+    <string name="rating_low">Рейтингът на храната е прекалено нисък!</string>
+    <string name="home">Начална Страница</string>
+    <string name="topten">Топ Десет</string>
+    <string name="top_5_foods_text">Топ 5 храни според bg-mamma и Топ 5 пикантни храни</string>
+    <string name="hall_of_fame">Зала на славата</string>
+    <string name="with_great_flavour_comes_great_eating">Със страхотния вкус идва страхотното хапване</string>
+    <string name="user_location">Потребителска локация:</string>
+    <string name="password">Парола</string>
+    <string name="conf_password">Потвърди паролата</string>
+    <string name="password_not_the_same">Паролата не е еднаква!</string>
+    <string name="register_here">Все още нямате акаунт? Регистрирайте се тук</string>
+    <string name="login">Вход</string>
+    <string name="invalid_type">Невалиден тип</string>
+    <string name="no_network_dialog_message">Моля, уверете се, че имате активна мрежова връзка и опитайте отново!</string>
+    <string name="ok">Добре</string>
+    <string name="setting">НАСТРОЙКИ</string>
+    <string name="always_hungry_for_more">Ввинаги гладен за още!</string>
+    <string name="no_network_dialog_title">Няма връзка с мрежата!</string>
+    <string name="preference">Предпочитание</string>
+    <string name="sync_data">инхронизиране на данни</string>
+    <string name="log_out">Изход</string>
+    <string name="last_time_sync">Последна синхронизация: %1$d</string>
+
+    <string name="new_food_channel_descr">Spicy new Foods are available for you to vote!</string>
+    <string name="channel1">channel1</string>
+    <string name="new_food_channel_title">New Food Options</string>
+
+    <string name="vote_channel_descr">Vote for %s into the app!</string>
+    <string name="channel2">channel2</string>
+    <string name="vote_channel_title">Help Others Decide</string>
+    <string name="history">History</string>
+    <string name="pass_hidden">Hidden Pass</string>
+    <string name="pass_shown">Shown Pass</string>
+
+    <string name="app_logo_content">App Logo</string>
+    <string name="error_content">Error</string>
+    <string name="fine_content">Fine</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <string name="invalid_password">Invalid password</string>
+    <string name="passwords_don_t_match">Passwords don\'t match</string>
+    <string name="invalid_name">Invalid name</string>
+    <string name="main_background">Main Background</string>
+</resources>

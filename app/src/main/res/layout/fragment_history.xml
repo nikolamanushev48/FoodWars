@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.mentormate.foodwars.domain.vo.history.HistoryUIModel" />
+
+        <variable
+            name="presenter"
+            type="com.mentormate.foodwars.ui.history.HistoryPresenter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/history_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="@string/history"
+            android:textColor="@color/white"
+            android:textSize="@dimen/basic_information_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/history_card_view"
+            android:layout_width="360dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            app:cardBackgroundColor="@color/fade_black"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/history_title">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/history_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

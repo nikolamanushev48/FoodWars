@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.mentormate.foodwars.domain.vo.topten.TopTenUIModel" />
+
+        <variable
+            name="presenter"
+            type="com.mentormate.foodwars.ui.topten.TopTenPresenter" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/top_ten_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_ten_title_margin_top"
+                android:background="@color/white"
+                android:backgroundTint="@color/top_ten_title_color"
+                android:text="@string/top_5_foods_text"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/top_5_foods_text_size"
+                android:textStyle="italic"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="360dp"
+                android:layout_height="450dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_top_top_card"
+                android:layout_marginBottom="@dimen/margin_bottom_top_card"
+                app:cardBackgroundColor="@color/top_ten_card_color"
+                app:cardCornerRadius="@dimen/topten_card_view_radius_corner"
+                app:elevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

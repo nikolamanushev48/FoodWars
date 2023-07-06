@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FoodWarsSplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#1D781A</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/app_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.FirstSteps</item>
+    </style>
+</resources>

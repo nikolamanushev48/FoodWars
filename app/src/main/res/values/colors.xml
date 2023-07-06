@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="customBackground">#228026</color>
+    <color name="customSpannable">#CAFF39</color>
+    <color name="medium_blue">#2FA5E4</color>
+    <color name="button_style_start">#09DF3F</color>
+    <color name="button_style_center">#14CDC7</color>
+    <color name="button_style_end">#0014C3</color>
+    <color name="purple">#720DCC</color>
+    <color name="change_location_button_start_custom">#FF9800</color>
+    <color name="change_location_button_end_custom">#FFE500</color>
+    <color name="yellow">#FFE500</color>
+    <color name="light_orange">#FF5722</color>
+
+    <color name="profile_current_location_card_background">#BA000000</color>
+    <color name="profile_range_card_background">#81000000</color>
+    <color name="profile_card_basic_background">#6B042EFF</color>
+    <color name="dark_blue">#0E2CC1</color>
+    <color name="brown">#753A07</color>
+    <color name="fade_black">#65000000</color>
+    <color name="green_yellow">#84BF24</color>
+    <color name="shadow_blue">#107AB3</color>
+    <color name="top_ten_title_color">#9E000000</color>
+    <color name="top_ten_card_color">#27FFEB3B</color>
+    <color name="radio_button_font">#12A346</color>
+    <color name="radio_button_check_color">#11F16B</color>
+    <color name="light_brown">#34E4C62F</color>
+    <color name="fade_green">#4D18D611</color>
+
+    <color name="red_card_color">#4DFF0808</color>
+    <color name="green_card_color">#4D18D611</color>
+    <color name="main_card_view_color">#000000</color>
+    <color name="register_button_color">#27F320</color>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+
+            <gradient android:endColor="@color/change_location_button_start_custom" android:startColor="@color/change_location_button_end_custom" android:type="linear" />
+            <corners android:radius="@dimen/custom_buttons_radius" />
+        </shape>
+    </item>
+</selector>

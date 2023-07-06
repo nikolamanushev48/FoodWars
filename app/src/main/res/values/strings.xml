@@ -1,0 +1,167 @@
+<resources>
+    <string name="food">Food</string>
+    <string name="app_name">Food Wars</string>
+    <string name="start_logo">Start Logo</string>
+    <string name="card_image">Card Image</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="gross">Gross</string>
+    <string name="pleskavica">Pleskavica</string>
+    <string name="baklava">Baklava</string>
+    <string name="goulash">Goulash</string>
+    <string name="gyros">Gyros</string>
+    <string name="porcului">Porcului</string>
+    <string name="sarma">Sarma</string>
+    <string name="ferges">Ferges</string>
+    <string name="shopska_salad">Shopska Salad</string>
+    <string name="food_shared_preferences_file_key">sharedFood</string>
+    <string name="users_shared_preferences_file_key">users</string>
+    <string name="create_account">Create Account</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="man">Man</string>
+    <string name="woman">Woman</string>
+    <string name="other">Other</string>
+    <string name="interests">Interests</string>
+    <string name="bulgarian">Bulgarian</string>
+    <string name="register">Register</string>
+    <string name="share">Share</string>
+    <string name="mainscreen">MainScreen</string>
+    <string name="profile">Profile</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="full_name">Full Name</string>
+    <string name="gender">Gender</string>
+
+    <string name="question_who">Who </string>
+    <string name="question_is">Is\n </string>
+    <string name="question_hungry">HUNGRY </string>
+    <string name="question_question_mark">"?"</string>
+
+    <string name="confirmation">Confirmation</string>
+    <string name="word_is">is</string>
+    <string name="greek">Greek</string>
+    <string name="serbian">Serbian</string>
+    <string name="albanian">Albanian</string>
+    <string name="romanian">Romanian</string>
+    <string name="turkish">Turkish</string>
+    <string name="required_field">Field is required!</string>
+    <string name="invalid_email">Invalid email!</string>
+    <string name="predefined_message">
+        %1$s %2$s likes %3$s which is part of the %4$s foods!
+    </string>
+
+    <string-array name="interests">
+        <item name="bulgarian">Bulgarian</item>
+        <item name="serbian">Serbian</item>
+        <item name="turkish">Turkish</item>
+        <item name="greek">Greek</item>
+        <item name="albanian">Albanian</item>
+        <item name="romanian">Romanian</item>
+    </string-array>
+
+    <string name="share_via">Share Via</string>
+    <string name="already_inserted_data">Already Inserted Data!</string>
+    <string name="back_to_the_app">Back to the app</string>
+    <string name="salty">salty</string>
+    <string name="hot">hot</string>
+    <string name="cold">cold</string>
+    <string name="spicy">spicy</string>
+    <string name="dry">dry</string>
+    <string name="wet">wet</string>
+    <string name="baked">baked</string>
+    <string name="fried">fried</string>
+    <string name="sweet">sweet</string>
+    <string name="high_in_nutrition">high in nutrition</string>
+    <string name="bitter">bitter</string>
+    <string name="tough">tough</string>
+    <string name="traditional">traditional</string>
+    <string name="regional">regional</string>
+    <string name="dessert">dessert</string>
+    <string name="main_dish">main dish</string>
+    <string name="starter">starter</string>
+    <string name="high_in_protein">high in protein</string>
+    <string name="high_in_carbs">high in carbs</string>
+    <string name="nobody_but_chickens">Nobody here but us chickens!</string>
+    <string name="description_text">Set your location so that you can see new foods around you !</string>
+    <string name="motivation_text_lets">Let\'s</string>
+    <string name="motivation_text_go">GO</string>
+    <string name="motivation_text_mark">!</string>
+    <string name="change">Change</string>
+    <string name="change_location">Change Location</string>
+    <string name="sad_face">Sad Face</string>
+    <string name="permission_permanently_denied">Permission Permanently Denied!</string>
+    <string name="settings">Settings</string>
+    <string name="get_location_success_text">Location successfully changed! %1$d new foods around you !</string>
+    <string name="done">Done</string>
+    <string name="alert_message">Location permission is needed to track your location current location !</string>
+    <string name="positive_button_alert">Sure</string>
+    <string name="negative_button_alert">Back</string>
+    <string name="perm_denied_location">Permanently denied location!</string>
+    <string name="example_charactristic">example</string>
+    <string name="user_address">User address: %1$l</string>
+
+    <string name="absolutely_terrible">Absolutely Terrible</string>
+    <string name="terrible">Terrible</string>
+    <string name="very_bad">Very Bad</string>
+    <string name="bad">Bad</string>
+    <string name="normal">Normal</string>
+    <string name="tasty">Tasty</string>
+    <string name="good">Good</string>
+    <string name="very_good">Very Good</string>
+    <string name="delicious">Delicious</string>
+    <string name="absolutely_delicious">Absolutely Delicious</string>
+
+    <string name="name">Name</string>
+    <string name="type">Type</string>
+    <string name="basic_information">Basic information</string>
+    <string name="range">Range</string>
+    <string name="current_location">Current Location</string>
+    <string name="rating_text">Food Rating: %d</string>
+    <string name="rating_low">Food rating is too low!</string>
+
+    <string name="home">Home</string>
+    <string name="topten">TopTen</string>
+    <string name="top_5_foods_text">Top 5 Foods according to bg-mamma and Top 5 spicy foods</string>
+    <string name="hall_of_fame">Hall Of Fame</string>
+    <string name="with_great_flavour_comes_great_eating">With great flavour comes great eating</string>
+    <string name="user_location">User Location:</string>
+    <string name="password">Password</string>
+    <string name="conf_password">Confirm Password</string>
+    <string name="password_not_the_same">Password is not the same!</string>
+    <string name="register_here">Don\'t have an account yet? Register here</string>
+    <string name="login">Log in</string>
+    <string name="invalid_type">Invalid Type</string>
+    <string name="no_network_dialog_message">Please ensure you have an active network connection and try again!</string>
+    <string name="ok">OK</string>
+    <string name="setting">SETTING</string>
+    <string name="always_hungry_for_more">Always hungry for more!</string>
+    <string name="no_network_dialog_title">No network connection!</string>
+    <string name="preference">Preference</string>
+    <string name="sync_data">Sync Data</string>
+    <string name="log_out">Log Out</string>
+    <string name="last_time_sync">Last time sync: %1$s</string>
+
+    <string name="new_food_channel_descr">Spicy new Foods are available for you to vote!</string>
+    <string name="channel1">channel1</string>
+    <string name="new_food_channel_title">New Food Options</string>
+
+    <string name="vote_channel_descr">Vote for %s into the app!</string>
+    <string name="channel2">channel2</string>
+    <string name="vote_channel_title">Help Others Decide</string>
+    <string name="history">History</string>
+    <string name="pass_hidden">Hidden Pass</string>
+    <string name="pass_shown">Shown Pass</string>
+
+    <string name="app_logo_content">App Logo</string>
+    <string name="error_content">Error</string>
+    <string name="fine_content">Fine</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <string name="invalid_password">Invalid password</string>
+    <string name="passwords_don_t_match">Passwords don\'t match</string>
+    <string name="invalid_name">Invalid name</string>
+    <string name="main_background">Main Background</string>
+    <string name="award">Award</string>
+
+</resources>

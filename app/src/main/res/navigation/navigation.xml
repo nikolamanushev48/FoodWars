@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/main_screen">
+
+    <fragment
+        android:id="@+id/main_screen"
+        android:name="com.mentormate.foodwars.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainActivity_to_registrationFragment"
+            app:destination="@id/registration_screen"
+            app:popUpTo="@id/registration_screen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainActivity_to_profileScreen"
+            app:destination="@id/profile_screen"
+            app:popUpTo="@id/main_screen" />
+        <action
+            android:id="@+id/action_main_screen_to_foodDetailsFragment"
+            app:destination="@id/food_details_fragment">
+        </action>
+        <argument
+            android:name="sentFoodId"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_main_screen_to_history_screen"
+            app:destination="@id/history_screen" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/registration_screen"
+        android:name="com.mentormate.foodwars.ui.registration.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_mainActivity"
+            app:destination="@id/main_screen"
+            app:popUpTo="@id/registration_screen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_screen"
+        android:name="com.mentormate.foodwars.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_screen_to_changeLocationFragment"
+            app:destination="@id/change_location_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/motivation_screen"
+        android:name="com.mentormate.foodwars.ui.motivation.MotivationFragment"
+        android:label="motivation_screen" />
+
+    <action
+        android:id="@+id/action_global_motivationScreen"
+        app:destination="@id/motivation_screen" />
+    <action
+        android:id="@+id/action_global_loginScreen"
+        app:destination="@id/login_screen" />
+    <fragment
+        android:id="@+id/change_location_fragment"
+        android:name="com.mentormate.foodwars.ui.location.ChangeLocationFragment"
+        android:label="ChangeLocationFragment" />
+    <fragment
+        android:id="@+id/food_details_fragment"
+        android:name="com.mentormate.foodwars.ui.details.FoodDetailsFragment"
+        android:label="FoodDetailsFragment" >
+        <argument
+            android:name="sentFoodId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/top_ten_screen"
+        android:name="com.mentormate.foodwars.ui.topten.TopTenFragment"
+        android:label="TopTenFragment" >
+        <action
+            android:id="@+id/action_top_ten_screen_to_food_details_fragment"
+            app:destination="@id/food_details_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_screen"
+        android:name="com.mentormate.foodwars.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_main_screen"
+            app:destination="@id/main_screen" />
+        <action
+            android:id="@+id/action_loginFragment_to_registration_screen"
+            app:destination="@id/registration_screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/history_screen"
+        android:name="com.mentormate.foodwars.ui.history.HistoryFragment"
+        android:label="HistoryFragment" >
+        <action
+            android:id="@+id/action_history_screen_to_main_screen"
+            app:destination="@id/main_screen" />
+        <action
+            android:id="@+id/action_history_screen_to_food_details_fragment"
+            app:destination="@id/food_details_fragment" />
+    </fragment>
+</navigation>

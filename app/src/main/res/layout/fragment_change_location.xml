@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.mentormate.foodwars.domain.vo.location.ChangeLocationUIModel" />
+
+        <variable
+            name="presenter"
+            type="com.mentormate.foodwars.ui.location.ChangeLocationPresenter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ChangeLocationFragment">
+
+        <TextView
+            android:id="@+id/description_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/description_margin_side"
+            android:layout_marginTop="@dimen/description_text_margin_top"
+            android:layout_marginRight="@dimen/description_margin_side"
+            android:text="@string/description_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/description_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibilityByBool="@{model.descriptionTextViewVisibility}" />
+
+        <TextView
+            android:id="@+id/motivation_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/motivation_margin_side"
+            android:layout_marginTop="@dimen/motivateion_text_margin_top"
+            android:layout_marginRight="@dimen/motivation_margin_side"
+            android:textAlignment="center"
+            android:textSize="@dimen/motivation_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_text_view"
+            app:spannableText="@{true}"
+            app:visibilityByBool="@{model.motivationTextViewVisibility}" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/change_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/change_button_margin_side"
+            android:layout_marginTop="@dimen/change_button_margin_top"
+            android:layout_marginRight="@dimen/change_button_margin_side"
+            style="@style/ButtonStyle"
+            android:onClick="@{() -> presenter.changeLocationButtonClicked()}"
+            android:text="@string/change"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/motivation_text_view"
+            app:visibilityByBool="@{model.changeButtonVisibility}" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/lottie_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/change_button"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/searching_animation"
+            app:visibilityByBool="@{model.animationViewVisibility}"
+            tools:ignore="MissingClass" />
+
+        <ImageView
+            android:id="@+id/emotion_face_image_view"
+            android:layout_width="@dimen/emotion_face"
+            android:layout_height="@dimen/emotion_face"
+            android:layout_marginBottom="300dp"
+            android:contentDescription="@string/sad_face"
+            app:imageByResource="@{model.emotionFaceImageResource}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sad_face"
+            app:visibilityByBool="@{model.emotionFaceImageViewVisibility}" />
+
+        <TextView
+            android:id="@+id/emotion_state_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/denied_state_text_margin_side"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="@dimen/denied_state_text_margin_side"
+            android:text="@string/permission_permanently_denied"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/denied_text_text_size"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emotion_face_image_view"
+
+            app:successTextResource="@{model.emotionStateTextResource}"
+            app:numberOfFoods="@{model.numberOfFoods}"
+            app:textSizeByResource="@{model.emotionStateTextSizeResource}"
+            app:visibilityByBool="@{model.emotionStateTextVisibility}" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settings_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/settings_button_margin_side"
+            android:layout_marginTop="@dimen/settings_button_margin_top"
+            android:layout_marginRight="@dimen/settings_button_margin_side"
+            android:layout_marginBottom="@dimen/settings_button_margin_bottom"
+            android:backgroundTint="#2683E4"
+            android:drawableLeft="@drawable/settings_icon"
+            android:onClick="@{() -> presenter.settingsButtonClicked()}"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/denied_state_button_text_size"
+            android:textStyle="italic"
+            app:buttonTextByResource="@{model.settingsButtonTextResource}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emotion_state_text"
+            app:visibilityByBool="@{model.settingsButtonVisibility}"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

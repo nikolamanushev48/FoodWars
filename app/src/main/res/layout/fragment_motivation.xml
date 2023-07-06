@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/fragment_motivation_scene">
+
+        <TextView
+            android:id="@+id/motivation_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/motivation_text_margin_side"
+            android:layout_marginRight="@dimen/motivation_text_margin_side"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/motivation_screen_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_motivation_screen"
+            app:motivationSpan="@{true}" />
+
+        <View
+            android:id="@+id/view_background_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:background="#7008FA00"/>
+        <View
+            android:id="@+id/view_background_end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="#9E000000"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_motivation_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

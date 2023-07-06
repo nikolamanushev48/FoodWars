@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.mentormate.foodwars.domain.vo.details.FoodDetailsUIModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".FoodDetailsFragment">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="364dp"
+                android:layout_height="900dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/card_view_image_margin_side"
+                android:layout_marginTop="@dimen/card_view_margin_up_side"
+                android:layout_marginRight="@dimen/card_view_image_margin_side"
+                android:layout_marginBottom="@dimen/card_view_margin_up_side"
+                app:cardBackgroundColor="@color/light_brown"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@id/topten_food_image_view"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:contentDescription="@string/food"
+                        android:transitionName="current_food"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:urlByGlide="@{model.imageResource}" />
+
+                    <ImageView
+                        android:id="@+id/award"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/award"
+                        app:layout_constraintStart_toEndOf="@+id/topten_food_image_view"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/info_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_food_text"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="@dimen/margin_food_text"
+                        android:background="@drawable/main_food_text_style"
+                        android:text="@{model.foodName}"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/text_size_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/topten_food_image_view" />
+
+                    <TextView
+                        android:id="@+id/type_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_food_text"
+                        android:layout_marginTop="@dimen/nationality_main_margin_top"
+                        android:layout_marginRight="@dimen/margin_food_text"
+                        android:background="@drawable/custom_buttons"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/text_size_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/info_text"
+                        app:type="@{model.type}" />
+
+                    <TextView
+                        android:id="@+id/hidden_rating"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/fade_black"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/button_left"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:ratingTextByResource="@{model.rating.number}"
+                        app:visibilityByBool="@{model.ratingTextViewVisibility}" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/characteristic_chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"
+                        app:chipViews="@{model.characteristics}"
+                        app:layout_constraintTop_toBottomOf="@id/type_text"
+                        tools:layout_editor_absoluteX="-16dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/more_info_card_view"
+                        android:layout_width="320dp"
+                        android:layout_height="320dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="100dp"
+                        app:cardBackgroundColor="@color/top_ten_card_color"
+                        app:cardCornerRadius="@dimen/topten_card_view_radius_corner"
+                        app:elevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/characteristic_chip_group">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_left"
+                        style="@style/ButtonStyle"
+                        android:text="@string/tasty"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:visibilityByBool="@{model.buttonVisibility}" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_right"
+                        style="@style/ButtonStyle"
+                        android:text="@string/gross"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:visibilityByBool="@{model.buttonVisibility}" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
