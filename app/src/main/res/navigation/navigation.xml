@@ -9,7 +9,7 @@
         android:id="@+id/main_screen"
         android:name="com.mentormate.foodwars.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main">
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_mainActivity_to_registrationFragment"
             app:destination="@id/registration_screen"
@@ -94,6 +94,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registration_screen"
             app:destination="@id/registration_screen" />
+        <action
+            android:id="@+id/action_loginFragment_to_profile_screen"
+            app:destination="@id/profile_screen" />
     </fragment>
     <fragment
         android:id="@+id/history_screen"

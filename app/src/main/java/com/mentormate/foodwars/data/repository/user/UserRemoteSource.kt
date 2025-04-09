@@ -1,5 +1,6 @@
 package com.mentormate.foodwars.data.repository.user
 
+import android.util.Log
 import com.mentormate.foodwars.data.network.body.*
 import com.mentormate.foodwars.data.network.model.UserRegistered
 import com.mentormate.foodwars.data.network.response.*
@@ -17,8 +18,11 @@ class UserRemoteSource @Inject constructor(
     override suspend fun getUser(userId: Long): BaseResponse<UserResponse> =
         userService.getUser(userId)
 
-    override suspend fun register(userRegistered: UserRegisteredBody): BaseResponse<UserRegistered> =
-        userService.register(userRegistered)
+    override suspend fun register(userRegistered: UserRegisteredBody): BaseResponse<UserRegistered> {
+        Log.d("testt","register2")
+        Log.d("testt", userRegistered.toString())
+        return userService.register(userRegistered)
+    }
 
     override suspend fun login(userLoginRequest: UserLoginBody): BaseResponse<UserLogin> =
         userService.login(userLoginRequest)

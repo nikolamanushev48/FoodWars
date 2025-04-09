@@ -1,6 +1,7 @@
 package com.mentormate.foodwars.ui.profile
 
 import android.net.Uri
+import android.util.Log
 import android.view.MenuItem
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -43,6 +44,7 @@ class ProfileViewModel @Inject constructor(
                 _navigation.value = PopBack
                 true
             }
+
             else -> false
         }
 
@@ -57,10 +59,10 @@ class ProfileViewModel @Inject constructor(
                         email,
                         gender
                     ),
-                    subNomenclatures = userRepository.getInterestById(
-                        INTEREST,
-                        true
-                    ).response.categories.toListOfString(),
+//                    subNomenclatures = userRepository.getInterestById(
+//                        INTEREST,
+//                        true
+//                    ).response.categories.toListOfString(),
                     lastSync = lastSyncTime
                 )
 
@@ -92,7 +94,7 @@ class ProfileViewModel @Inject constructor(
                     with(userRepository) {
                         it.response.let { response ->
                             response.interest = interest
-                            response.toUser().let{ user ->
+                            response.toUser().let { user ->
                                 user.lastSyncTime = Calendar.getInstance().time.toString()
                                 lastSync = user.lastSyncTime
                                 update(user)

@@ -32,7 +32,7 @@ data class UserUpdateResponse(
 @Serializable
 data class UserLogin(
     val userId: Long,
-    val status: String,
+    val status: String
 )
 
 @Serializable

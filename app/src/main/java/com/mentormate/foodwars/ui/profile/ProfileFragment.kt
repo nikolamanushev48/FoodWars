@@ -1,6 +1,7 @@
 package com.mentormate.foodwars.ui.profile
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -42,6 +43,8 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
     ) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        Log.d("testt","PROFILE")
         setProvider()
         setActionBar()
 

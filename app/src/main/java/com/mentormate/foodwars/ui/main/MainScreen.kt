@@ -3,6 +3,7 @@ package com.mentormate.foodwars.ui.main
 import android.Manifest
 import android.annotation.SuppressLint
 import android.os.Build
+import android.util.Log
 import androidx.activity.compose.ManagedActivityResultLauncher
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -56,20 +57,19 @@ import com.mentormate.foodwars.utils.rememberSwipeableCardState
 import com.mentormate.foodwars.utils.swappableCard
 
 @OptIn(ExperimentalMaterial3Api::class)
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     Scaffold(
         topBar = { FoodWarsToolbar() },
-        bottomBar = { FoodWarsBottomNavigation() },
+        bottomBar = { FoodWarsBottomNavigation(viewModel) },
         modifier = Modifier.fillMaxSize()
     ) {
-
         Box(
             modifier = Modifier
-                .padding(it)
-                .background(MaterialTheme.colorScheme.surface),
+                .background(MaterialTheme.colorScheme.surface)
         ) {
             val dataItems = uiState.foodUIModelList
                 .map { it to rememberSwipeableCardState() }
@@ -99,14 +99,14 @@ fun FoodWarsToolbar() {
                 color = MaterialTheme.colorScheme.primary
             )
         },
-        colors = TopAppBarDefaults.smallTopAppBarColors(
+        colors = TopAppBarDefaults.topAppBarColors(
             containerColor = MaterialTheme.colorScheme.secondary
         )
     )
 }
 
 @Composable
-fun FoodWarsBottomNavigation() {
+fun FoodWarsBottomNavigation(viewModel: MainViewModel) {
     val bottomMenuItemsList = prepareBottomMenu()
 
     val state = stringResource(id = R.string.home)
@@ -125,6 +125,7 @@ fun FoodWarsBottomNavigation() {
                     selected = (selectedItem == text),
                     onClick = {
                         selectedItem = text
+                        viewModel.bottomMenuStateHandling(menuItem.label)
                     },
                     icon = {
                         Icon(
@@ -203,6 +204,7 @@ fun FoodCard(
                 )
             }
 
+            Log.d("testt","Image: " + foodUI.imageUrl)
             GlideImage(
                 alignment = Alignment.Center,
                 model = foodUI.imageUrl,
@@ -242,6 +244,8 @@ fun DefaultState(
     val defaultColor = colorResource(id = R.color.black)
     val redCardColor = colorResource(id = R.color.red_card_color)
     val greenCardColor = colorResource(id = R.color.green_card_color)
+
+    Log.d("testt","data items:" + dataItems)
 
     dataItems.forEach { (item, direction) ->
         if (direction.swipedDirection == null) {

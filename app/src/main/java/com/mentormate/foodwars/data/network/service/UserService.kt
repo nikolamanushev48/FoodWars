@@ -12,7 +12,8 @@ interface UserService {
     @GET("user/{id}")
     suspend fun getUser(@Path("id") userId: Long): BaseResponse<UserResponse>
 
-    @POST("user")
+    @Headers("Content-Type: application/json")
+    @POST("auth/register")
     suspend fun register(@Body userRegistered: UserRegisteredBody): BaseResponse<UserRegistered>
 
     @PUT("user/{id}")
@@ -21,10 +22,10 @@ interface UserService {
         @Body userUpdateBody: UserUpdateBody
     ): BaseResponse<UserUpdateResponse>
 
-    @POST("login")
+    @POST("auth/login")
     suspend fun login(@Body userLoginRequest: UserLoginBody): BaseResponse<UserLogin>
 
-    @GET("login/{userId}")
+    @GET("auth/login-status/{userId}")
     suspend fun loginStatus(@Path("userId") userId: Long): BaseResponse<UserLoginStatus>
 
     @HTTP(method = "DELETE", path = "logout", hasBody = true)

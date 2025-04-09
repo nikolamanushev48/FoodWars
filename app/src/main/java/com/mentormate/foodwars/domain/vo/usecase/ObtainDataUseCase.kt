@@ -1,5 +1,6 @@
 package com.mentormate.foodwars.domain.vo.usecase
 
+import android.util.Log
 import com.mentormate.foodwars.data.network.model.toFood
 import com.mentormate.foodwars.data.repository.food.FoodRepository
 import com.mentormate.foodwars.data.room.*
@@ -13,8 +14,12 @@ class ObtainDataUseCase @Inject constructor(
         val characteristicsCrossRefs = mutableListOf<FoodCharacteristicCrossRef>()
         val relatedItemsCrossRefs = mutableListOf<FoodRelatedItemCrossRef>()
 
+
+        Log.d("testt","HERE!")
         val foodList =
             foodRepository.getAllFoodsByUserIdRemote(parameters).response.voteItemsInUserContext
+
+        Log.d("testt","FOOOD LIAST: " + foodList)
         val characteristicSet: MutableSet<Characteristic> = mutableSetOf()
         val relatedItemsSet: MutableSet<RelatedItemTable> = mutableSetOf()
 

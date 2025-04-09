@@ -1,21 +1,21 @@
 package com.mentormate.foodwars.data.network.body
 
 import com.mentormate.foodwars.data.network.model.UserDetails
+import com.mentormate.foodwars.data.room.User
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class UserLoginBody(
     val email: String,
-    val password: String,
-    val applicationInterestCode: String
+    val password: String
 )
 
 @Serializable
 data class UserRegisteredBody(
     @SerialName("loginAutomatically")
     val autoLogin: Boolean,
-    val userDetails: UserDetails
+    val user: User
 )
 
 @Serializable

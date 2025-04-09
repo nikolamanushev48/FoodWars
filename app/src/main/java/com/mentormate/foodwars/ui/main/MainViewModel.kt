@@ -8,7 +8,6 @@ import com.mentormate.foodwars.data.Taste
 import com.mentormate.foodwars.data.ToDirection
 import com.mentormate.foodwars.data.repository.food.FoodRepository
 import com.mentormate.foodwars.data.repository.user.UserRepository
-import com.mentormate.foodwars.data.room.Food
 import com.mentormate.foodwars.data.room.UpdateTaste
 import com.mentormate.foodwars.data.room.toFoodUIModel
 import com.mentormate.foodwars.domain.vo.main.FoodUIModel
@@ -20,7 +19,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
@@ -37,6 +35,11 @@ class MainViewModel @Inject constructor(
         started = SharingStarted.WhileSubscribed(stopTimeoutMillis = 5000),
         initialValue = MainState()
     )
+
+
+    fun bottomMenuStateHandling(label: Int){
+        _navigation.value = ToDirection(R.id.action_mainActivity_to_profileScreen)
+    }
 
     fun shareFood(currFood: FoodUIModel) {
         viewModelScope.launch {

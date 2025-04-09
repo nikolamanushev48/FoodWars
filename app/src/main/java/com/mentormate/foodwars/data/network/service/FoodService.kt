@@ -20,7 +20,7 @@ interface FoodService {
     @PUT("item/{id}")
     suspend fun update(@Path("id") foodId: Long): BaseResponse<FoodResponse>
 
-    @GET("item/all/{userId}")
+    @GET("food/getFoodsByUserId/{userId}")
     suspend fun getAllByUserId(@Path("userId") userId: Long): BaseResponse<AllFoodResponse>
 
     @DELETE("item/{itemId}")

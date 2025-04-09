@@ -38,6 +38,7 @@ import androidx.compose.ui.draw.paint
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -66,14 +67,18 @@ fun LoginScreen(viewModel: LoginViewModel = hiltViewModel()) {
     }
     val password = remember { PasswordState() }
     val focusRequester = remember { FocusRequester() }
-    val colors = TextFieldDefaults.outlinedTextFieldColors(
-        focusedBorderColor = White,
-        cursorColor = White,
-        focusedLabelColor = White,
-        textColor = White,
-        unfocusedLabelColor = White,
-        unfocusedBorderColor = White
+    val colors = TextFieldDefaults.colors(
+        focusedContainerColor = Color.Transparent,
+        unfocusedContainerColor = Color.Transparent,
+        disabledContainerColor = Color.Transparent,
+        errorContainerColor = Color.Transparent,
+        focusedIndicatorColor = White,
+        unfocusedIndicatorColor = White,
+        disabledIndicatorColor = White,
+        errorIndicatorColor = White,
+        cursorColor = White
     )
+
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,

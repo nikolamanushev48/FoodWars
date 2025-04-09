@@ -4,8 +4,10 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.mentormate.foodwars.ui.constants.INVALID_ID
+import kotlinx.serialization.Serializable
 import java.util.*
 
+@Serializable
 @Entity(tableName = "user_table")
 data class User(
     @PrimaryKey(autoGenerate = true)
@@ -22,5 +24,6 @@ data class User(
     var localPicture: String = "",
     val remotePicture: String = "",
     val password: String = "",
-    var lastSyncTime: String = ""
+    var lastSyncTime: String = "",
+    val activeToken: String? = null
 )

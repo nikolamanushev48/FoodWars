@@ -1,5 +1,6 @@
 package com.mentormate.foodwars.ui.registration
 
+import android.util.Log
 import androidx.lifecycle.viewModelScope
 import com.mentormate.foodwars.R
 import com.mentormate.foodwars.data.BaseViewModel
@@ -59,13 +60,14 @@ class RegistrationViewModel @Inject constructor(
                 gender = gender.name,
                 interest = interest.number,
                 password = password,
-                localPicture = USER_IMAGE_URL
+                localPicture = ""
             ).let { user ->
                 with(userRepository) {
+                    Log.d("testt","register1")
                     register(
                         UserRegisteredBody(
                             true,
-                            user.toUserDetails()
+                            user
                         )
                     ).let {
                         insert(user)

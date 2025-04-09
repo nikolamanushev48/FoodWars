@@ -9,6 +9,7 @@ import com.mentormate.foodwars.data.repository.food.FoodRepository
 import com.mentormate.foodwars.data.repository.user.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -34,17 +35,17 @@ class HomeViewModel @Inject constructor(
     private suspend fun navigate() {
         userRepository.run {
             _navigation.value = if (isUserAvailable()) {
-                    if (loginStatus(readCurrentUser().userId).response.status == "ALREADY_LOGGED_IN" ||
-                        loginStatus(readCurrentUser().userId).response.status == "LOGGED_IN"
-                    ) {
-                        foodRepository.resetVotes()
-                        ToDirection(R.id.main_screen)
-                    } else {
-                        ToDirection(R.id.action_global_loginScreen)
-                    }
+                if (loginStatus(getCurrentUserWithFlow().first().userId).response.status == "ALREADY_LOGGED_IN" ||
+                    loginStatus(getCurrentUserWithFlow().first().userId).response.status == "LOGGED_IN"
+                ) {
+                    foodRepository.resetVotes()
+                    ToDirection(R.id.main_screen)
                 } else {
                     ToDirection(R.id.action_global_loginScreen)
                 }
+            } else {
+                ToDirection(R.id.action_global_loginScreen)
+            }
         }
         delay(DELAY)
         _splashDataAttr.value = false

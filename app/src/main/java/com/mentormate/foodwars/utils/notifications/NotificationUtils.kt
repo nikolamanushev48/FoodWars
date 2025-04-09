@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.NotificationManager
 import android.content.Context
 import androidx.core.app.NotificationCompat
-import androidx.core.graphics.drawable.toBitmap
 import androidx.navigation.NavDeepLinkBuilder
 import com.mentormate.foodwars.R
 

@@ -7,7 +7,6 @@ import com.mentormate.foodwars.data.BaseViewModel
 import com.mentormate.foodwars.data.ToDirection
 import com.mentormate.foodwars.data.network.body.UserLoginBody
 import com.mentormate.foodwars.data.network.response.UserLogin
-import com.mentormate.foodwars.data.network.response.toUser
 import com.mentormate.foodwars.data.repository.food.FoodRepository
 import com.mentormate.foodwars.data.repository.user.UserRepository
 import com.mentormate.foodwars.domain.vo.usecase.ObtainDataUseCase
@@ -30,8 +29,7 @@ class LoginViewModel @Inject constructor(
                 login(
                     UserLoginBody(
                         email,
-                        password,
-                        "REGIONAL_FOODS"
+                        password
                     )
                 ).response.let {
                     onLoginSuccessful(it)
@@ -41,9 +39,9 @@ class LoginViewModel @Inject constructor(
     }
 
     private suspend fun onLoginSuccessful(userLogin: UserLogin) {
-        userRepository.run {
-            insert(getUser(userLogin.userId).response.toUser())
-        }
+//        userRepository.run {
+//            insert(getUser(userLogin.userId).response.toUser())
+//        }
         if (userLogin.status == "ALREADY_LOGGED_IN" || userLogin.status == "LOGGED_IN") {
             _navigation.value = ToDirection(R.id.action_loginFragment_to_main_screen)
         } else {

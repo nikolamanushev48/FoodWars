@@ -17,6 +17,8 @@ class UserRepository @Inject constructor(
     interface UserLocalSource {
         suspend fun insert(value: User)
 
+        suspend fun getLocalUser(userId: Long): User?
+
         suspend fun isUserAvailable(): Boolean
 
         suspend fun readCurrentUser(): User
@@ -60,6 +62,8 @@ class UserRepository @Inject constructor(
 
     suspend fun getUser(userId: Long): BaseResponse<UserResponse> =
         remoteSource.getUser(userId)
+
+    suspend fun getLocalUser(userId: Long): User? = localSource.getLocalUser(userId)
 
     suspend fun register(userRegistered: UserRegisteredBody): BaseResponse<UserRegistered> =
         remoteSource.register(userRegistered)

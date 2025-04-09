@@ -1,6 +1,10 @@
 package com.mentormate.foodwars.data.room
 
 import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.Query
+import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -12,7 +16,7 @@ interface UserDao {
     suspend fun update(user: User)
 
     @Query("SELECT * from user_table WHERE user_Id = :key")
-    suspend fun get(key: Long): User?
+    suspend fun getLocalUser(key: Long): User?
 
     @Query("DELETE FROM user_table")
     suspend fun clear()

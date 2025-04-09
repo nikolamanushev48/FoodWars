@@ -13,6 +13,10 @@ class UserLocalSource @Inject constructor(
         userDao.insert(value)
     }
 
+    override suspend fun getLocalUser(userId: Long) =
+        userDao.getLocalUser(userId)
+
+
     override suspend fun isUserAvailable(): Boolean =
         userDao.getCurrentUser() != null
 

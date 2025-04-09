@@ -11,7 +11,7 @@ data class VotesSyncBody(
 
 @Serializable
 data class VotesForSync(
-    val userId: Long,
+    val userId: Long?,
     val itemId: Long,
     val votedStatus: String
 )

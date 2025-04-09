@@ -86,9 +86,7 @@ class NetworkModule {
         .writeTimeout(1, TimeUnit.MINUTES)
         .addInterceptor(Interceptor { chain ->
             with(chain.request().newBuilder(), fun Request.Builder.(): Request {
-                header("Accept", "application/json")
-                header("X-System-Identifier", "VOTEMATE_MOBILE_APPLICATION")
-                header("X-System-Access-Key", "mbl22vote01")
+                header("Content-Type", "application/json") // Add this
                 return build()
             }).let { requestWithHeaders ->
                 chain.proceed(requestWithHeaders)

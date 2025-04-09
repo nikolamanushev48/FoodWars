@@ -47,6 +47,7 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -93,13 +94,16 @@ fun RegistrationScreen(viewModel: RegistrationViewModel = hiltViewModel()) {
     val gender = rememberSaveable { mutableStateOf(Gender.OTHER) }
     val interest = rememberSaveable { mutableStateOf(InterestText.BULGARIAN) }
     val focusRequester = remember { FocusRequester() }
-    val colors = TextFieldDefaults.outlinedTextFieldColors(
-        focusedBorderColor = Color.White,
-        cursorColor = Color.White,
-        focusedLabelColor = Color.White,
-        textColor = Color.White,
-        unfocusedLabelColor = Color.White,
-        unfocusedBorderColor = Color.White
+    val colors = TextFieldDefaults.colors(
+        focusedContainerColor = Color.Transparent,
+        unfocusedContainerColor = Color.Transparent,
+        disabledContainerColor = Color.Transparent,
+        errorContainerColor = Color.Transparent,
+        focusedIndicatorColor = White,
+        unfocusedIndicatorColor = White,
+        disabledIndicatorColor = White,
+        errorIndicatorColor = White,
+        cursorColor = White
     )
 
     val scrollState = rememberScrollState()

@@ -33,7 +33,9 @@ const val CUSTOM_RED = 0
 const val CUSTOM_GREEN = 0
 const val CUSTOM_BLUE = 0
 
-const val BASE_URL = "http://votemate.int.devsmm.com:8088/votemate/v2/"
+//const val BASE_URL = "http://votemate.int.devsmm.com:8088/votemate/v2/"
+const val BASE_URL = "http://10.0.2.2:8080/"
+//const val BASE_URL = "http://192.168.1.6:8080/"
 
 const val USER_IMAGE_URL = "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpghttps://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Ff%2Ff1%2FAndrew_Tate_on_%2527Anything_Goes_With_James_English%2527_in_2021.jpg&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAndrew_Tate&tbnid=EudmFXvW0kLcZM&vet=12ahUKEwimheG9zsT8AhV7k_0HHZgvCSUQMygAegUIARDZAQ..i&docid=YATebPy4Hitd-M&w=720&h=959&itg=1&q=andrew%20tate&ved=2ahUKEwimheG9zsT8AhV7k_0HHZgvCSUQMygAegUIARDZAQ"
 

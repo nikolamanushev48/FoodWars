@@ -3,6 +3,7 @@ package com.mentormate.foodwars.ui.main
 import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.annotation.RequiresApi
 import androidx.compose.ui.platform.ComposeView
@@ -29,6 +30,7 @@ class MainFragment : Fragment(),
         setViewCompositionStrategy(
             ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
         )
+        Log.d("testt","HEREEEE")
         setContent {
             FoodTheme {
                 MainScreen(viewModel)
